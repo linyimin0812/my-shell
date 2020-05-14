@@ -8,3 +8,7 @@
 ## 查看本地IP
 
 [ifconfig | grep "inet " | grep -Fv "127.0.0.1" | awk '{print $2}' | sed 's/'addr:'//g'](查看IP.sh)
+
+## 查看当前使用的网卡名称
+
+[ip route get 1 | awk '$5!="" {print $5}'](查看网卡名称.sh)
