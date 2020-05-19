@@ -16,3 +16,7 @@
 ## 找出最大的文件
 
 [ls -lhS ./ | head -n 10](找出最大的文件.sh)
+
+## 获取网卡的上传和下载速度信息
+
+[cat /proc/net/dev | awk 'NR>2 {printf "{interface: %s, tx: %s, rx: %s}\n", $1, $2, $10}'](获取网络信息.sh)
