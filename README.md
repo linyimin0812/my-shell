@@ -19,4 +19,4 @@
 
 ## 获取网卡的上传和下载速度信息
 
-[cat /proc/net/dev | awk 'NR>2 {printf "{interface: %s, rx: %s, tx: %s}\n", $1, $2, $10}'](获取网络信息.sh)
+[cat /proc/net/dev | sed 's/://' | awk 'NR>2 {printf "{interface: %s, rx: %s, tx: %s}\n", $1, $2, $10}'](获取网络信息.sh)
