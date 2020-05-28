@@ -24,3 +24,7 @@
 ## 获取所有使用的端口
 
 [sudo lsof -i -P -n | grep "LISTEN" | awk '{print $9}' | cut -d ":" -f 2 | sort -nu](获取全部使用的端口.sh)
+
+## 获取执行的crontab命令
+
+[sudo grep "CRON" /var/log/syslog](获取crontab命令信息.sh)
