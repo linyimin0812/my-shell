@@ -28,3 +28,7 @@
 ## 获取执行的crontab命令
 
 [sudo grep "CRON" /var/log/syslog](获取crontab命令信息.sh)
+
+## 获取当前分区名称
+
+[git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'](获取分支名称.sh)
