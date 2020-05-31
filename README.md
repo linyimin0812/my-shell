@@ -32,3 +32,7 @@
 ## 获取当前分区名称
 
 [git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'](获取分支名称.sh)
+
+## Determine if ip is available
+
+[ping -c 3 192.168.110.146 > /dev/null 2>&1 && echo "available" || echo "not available!"](determine-if-ip-is-available.sh)
